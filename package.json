@@ -1,0 +1,71 @@
+{
+    "name": "anthem",
+    "description": "Anthem is a minimal blogging theme for Ghost",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Unstandard",
+        "email": "info@unstandard.dev",
+        "url": "https://unstandard.dev/anthem"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 6,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 1170
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "footer_text": {
+                "type": "text"
+            },
+            "social_media_location": {
+                "type": "select",
+                "options": ["header", "footer"],
+                "default": "header"
+            },
+            "title_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif",
+                    "Consistent mono"
+                ],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif",
+                    "Consistent mono"
+                ],
+                "default": "Modern sans-serif"
+            }
+        }
+    }
+}

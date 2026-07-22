@@ -1,0 +1,14 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+	the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Each post will be output using this markup }}
+{{#foreach posts}}
+
+	{{> "card"}}
+
+{{/foreach}}
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{pagination}}

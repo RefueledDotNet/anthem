@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{meta_title}}</title>
+
+	<link rel="stylesheet" href="{{asset "fonts/fontawesome/css/all.min.css"}}">
+	<link rel="stylesheet" href="{{asset "css/screen.css"}}">
+
+	{{!-- Fonts are preloaded and defined in the default template to avoid layout shift --}}
+	{{> "typography/fonts"}}
+
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}} has-{{#match @custom.title_font 'Elegant serif'}}serif{{else match @custom.title_font 'Consistent mono'}}mono{{else}}sans{{/match}}-title has-{{#match @custom.body_font 'Elegant serif'}}serif{{else match @custom.body_font 'Consistent mono'}}mono{{else}}sans{{/match}}-body">
+
+	<div id="page" class="hfeed site">
+
+		<header id="masthead" class="site-header">
+			<div class="branding">
+				<h1 class="site-title"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+				<p class="site-description">{{@site.description}}</p>
+			</div>
+
+			{{#match @custom.social_media_location "header"}}
+				<div class="social-navigation social-links">
+					{{navigation type="secondary"}}
+				</div>
+			{{/match}}
+
+			<div class="header-wrapper">
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle">Menu</button>
+					{{navigation}}
+				</nav><!-- #site-navigation -->
+			</div><!-- .header-wrapper -->
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">
+
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main">
+					{{{body}}}
+				</main><!-- #main -->
+			</div><!-- #primary -->
+
+		</div><!-- #content -->
+
+		<footer class="site-footer">
+			{{#match @custom.social_media_location "footer"}}
+				<div class="social-navigation social-links">
+					{{navigation type="secondary"}}
+				</div>
+			{{/match}}
+
+			<div class="site-info">
+				{{#unless @custom.footer_text}}
+					Powered by <a href="https://ghost.org/">Ghost</a> &amp; <a href="https://unstandard.dev">Unstandard</a>
+				{{else}}
+					{{@custom.footer_text}}
+				{{/unless}}
+			</div>
+		</footer>
+	</div><!-- #page -->
+
+	{{! Ghost outputs important scripts and data with this tag }}
+	{{ghost_foot}}
+
+	{{! The main JavaScript files}}
+	<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/navigation.js"}}"></script>
+
+</body>
+</html>

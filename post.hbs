@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+the {body} of the default.hbs template, which contains our header/footer. }}
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<article class="{{post_class}} hentry">
+
+	<div class="content-wrapper">
+		<header class="entry-header">
+			<h1 class="entry-title">{{{title}}}</h1>
+		</header><!-- .entry-header -->
+
+		{{> "feature-image"}}
+
+		<div class="entry-content gh-content gh-canvas">
+			{{content}}
+		</div>
+
+		<footer class="entry-footer post-footer gh-content gh-canvas">
+			{{#primary_author}}
+			<div class="post-author">
+				<p>Written by <a href="{{url}}">{{name}}</a> on {{date format="MMMM DD, YYYY"}}</p>
+			</div>
+			{{/primary_author}}
+
+			{{#if tags}}
+				<div class="tags">
+					{{#foreach tags}}
+						<a href="{{url}}">{{name}}</a>{{#unless @last}} {{/unless}}
+					{{/foreach}}
+				</div>
+			{{/if}}
+
+			{{#if comments}}
+				<section class="article-comments gh-canvas">
+					{{comments}}
+				</section>
+			{{/if}}
+		</footer>
+	</div>
+</article>
+{{/post}}

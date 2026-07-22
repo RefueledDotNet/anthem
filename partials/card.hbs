@@ -1,0 +1,20 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="gh-card {{post_class}} hentry">
+    <div class="content-wrap">
+        <header class="entry-header">
+            <div class="entry-meta gh-card-meta">
+                <span><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time></span>
+                <span>{{reading_time}}</span>
+            </div>
+
+            <h1 class="entry-title"><a href="{{url}}">{{{title}}}</a></h1>
+        </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>{{excerpt}}</p>
+        </div>
+    </div><!-- .content-wrapper -->
+</article>
