@@ -73,6 +73,11 @@
 	<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
 	<script type="text/javascript" src="{{asset "js/navigation.js"}}"></script>
+	<script>
+		/* Expose the theme preference chosen in Customize: "auto", "light", or "dark" */
+		window.__ANTHEM_THEME_PREFERENCE = "{{@custom.color_scheme}}" || 'auto';
+	</script>
+	<script type="text/javascript" src="{{asset "js/dark-mode.js"}}"></script>
 
 </body>
 </html>

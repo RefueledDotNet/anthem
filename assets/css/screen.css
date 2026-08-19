@@ -35,6 +35,111 @@ Version: 1.0.0
 	--color-hr: rgba(0, 0, 0, 0.1);
 }
 
+/* Dark mode variables — toggled by adding .theme-dark to the <html> element */
+.theme-dark {
+	--color-black: #fff;
+	--color-white: #000;
+	--color-gray-darkest: #e6e6e6;
+	--color-gray-dark: #d0d0d0;
+	--color-gray-medium: #9a9a9a;
+	--color-gray-light: #7a7a7a;
+	--color-gray-lighter: #4a4a4a;
+	--color-gray-lightest: #222;
+	--color-gray-bg: #0f0f0f;
+	--color-gray-form: #141414;
+	--color-gray-surface: #0b0b0b;
+	--color-blue: #5fb4ff;
+	--color-accent: var(--ghost-accent-color, #66b2ff);
+	--color-hr: rgba(255, 255, 255, 0.06);
+}
+
+/* Dark-mode navigation & accents adjustments */
+.theme-dark {
+	/* More visible, friendly accent on dark backgrounds */
+	--ghost-accent-color: #66b2ff;
+}
+
+.theme-dark .main-navigation a {
+	color: #e6e6e6;
+}
+
+.theme-dark .main-navigation li {
+	border-right-color: rgba(255,255,255,0.04);
+}
+
+/* Dark-mode element overrides */
+.theme-dark body,
+.theme-dark button,
+.theme-dark input,
+.theme-dark select,
+.theme-dark textarea {
+	color: var(--color-gray-darkest);
+	background: var(--color-white);
+}
+
+.theme-dark a {
+	color: var(--ghost-accent-color);
+}
+
+.theme-dark a:hover {
+	opacity: 0.9;
+}
+
+.theme-dark hr {
+	background-color: rgba(255,255,255,0.12);
+	height: 1px;
+	border: 0;
+}
+
+.theme-dark table,
+.theme-dark th,
+.theme-dark td {
+	border-color: rgba(255,255,255,0.06);
+}
+
+.theme-dark blockquote {
+	color: var(--color-gray-lighter);
+	border-left: 4px solid rgba(255,255,255,0.04);
+	background: transparent;
+	padding-left: 1em;
+}
+
+.theme-dark pre {
+	background: #0b0b0b;
+	color: var(--color-gray-darkest);
+}
+
+.theme-dark code,
+.theme-dark kbd,
+.theme-dark tt,
+.theme-dark var {
+	background: rgba(255,255,255,0.04);
+	color: var(--color-white);
+	border-radius: 3px;
+	padding: .1em .3em;
+}
+
+.theme-dark input:not([type=submit]),
+.theme-dark textarea {
+	background: var(--color-gray-form);
+	border-color: rgba(255,255,255,0.06);
+	color: var(--color-gray-darkest);
+}
+
+.theme-dark .widget-title,
+.theme-dark .widget-title a {
+	color: var(--color-gray-light);
+}
+
+.theme-dark .tags a {
+	background: rgba(255,255,255,0.04);
+	color: var(--color-gray-lightest);
+}
+
+.theme-dark .site-footer {
+	border-top-color: rgba(255,255,255,0.04);
+}
+
 /*--------------------------------------------------------------
 Reset
 --------------------------------------------------------------*/
@@ -142,7 +247,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: var(--color-white);
 }
 
 article,
@@ -225,6 +330,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 24px;
 }
+
+/* Header toggle removed — theme uses Customize setting (auto/light/dark) */
 
 h2 {
 	font-size: 22px;
@@ -1091,6 +1198,12 @@ Social Links
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
+}
+
+/* Dark-mode specific social hover: keep white background with reduced opacity */
+.theme-dark .social-links ul a:hover:before {
+	background: rgba(255,255,255,0.6);
+	color: var(--ghost-accent-color);
 }
 
 .social-navigation a[href$="/feed/"]:before {
