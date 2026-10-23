@@ -1,6 +1,6 @@
 ## Anthem
 
-Anthem by [Unstandard](https://unstandard.dev). Inspired by the Marianne WordPress theme by [Teddy](https://wordpress.org/themes/marianne/) with several changes.
+Anthem by [Refueled](https://refueled.net). Inspired by the Marianne WordPress theme by [Teddy](https://wordpress.org/themes/marianne/) with several changes.
 
 ## Files to edit
 
