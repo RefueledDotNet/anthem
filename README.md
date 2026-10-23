@@ -8,7 +8,6 @@ Anthem by [Refueled](https://refueled.net). Inspired by the Marianne WordPress t
  * default.hbs
 
 ## Credit Links
-Anthem is released under the GPL license. While we appreciate you keeping our credit links intact, this is not required. Simply go to your ```Ghost dashboard > Settings > Design > on left sidebar choose 'Site Wide'``` and you'll see a section to add your custom credit. There is no need to touch any code.
+Anthem is released under the MIT license. While we appreciate you keeping our credit links intact, this is not required. Simply go to your ```Ghost dashboard > Settings > Design > on left sidebar choose 'Site Wide'``` and you'll see a section to add your custom credit. There is no need to touch any code.
 
-Need to edit Anthem? The best free editor is VS Code. VS Code download:
-https://code.visualstudio.com/
+Need to edit Anthem? The best free editor is VS Code. [VS Code download](https://code.visualstudio.com/)
